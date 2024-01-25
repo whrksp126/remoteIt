@@ -1,0 +1,279 @@
+.sidebar{
+  position: fixed;
+  top: 0px;
+  z-index: 50;
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+  width: 288px;
+  height: 100%;
+  background: var(--color-f8);
+  padding: 0 24px;
+  border-right: 1px solid rgb(229, 231, 235);
+  padding: 0 24px 16px;
+}
+.sidebar .logo{
+  display: flex;
+  align-items: center;
+  height: 64px;
+}
+.sidebar .logo img{
+  height: 32px;
+}
+.sidebar nav{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  flex: 1;
+}
+.sidebar nav ul{}
+.sidebar nav ul li{}
+.sidebar nav ul li a{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  border-radius: 6px;
+}
+.sidebar nav ul li a.active{
+  background: #033459;
+}
+.sidebar nav ul li a.active i{
+  color: #fff;
+}
+.sidebar nav ul li a.active span{
+  color: #fff;
+}
+.sidebar nav ul li a i{
+  font-size: 24px;
+  color: #9ca3af;
+}
+.sidebar nav ul li a span{
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+.sidebar_mobile{
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  transition: all .4s;
+}
+.sidebar_mobile.active{
+  visibility: visible;
+  z-index: 50;
+}
+.sidebar_mobile .background {
+  background-color: rgb(17 24 39 / 0.8);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all .4s;
+}
+.sidebar_mobile.active .background {
+  opacity: 1;
+}
+.sidebar_mobile .sidebar {
+  left: -100%;
+  visibility: hidden;
+  display: flex;
+  transition: all .4s;
+}
+.sidebar_mobile.active .sidebar {
+  visibility: visible;
+  left: 0;
+}
+header{
+  position: sticky;
+  top: 0px;
+  z-index: 40;
+  display: none;
+  align-items: center;
+  gap: 24px;
+  height: 64px;
+  padding: 16px 24px;
+}
+header > button{
+  font-size: 24px;
+}
+header > div{
+  flex: 1;
+}
+header > a{
+  width: 32px;
+}
+main{
+  height: 100%;
+  padding-bottom: 40px;
+  padding-left: 288px;
+  padding-top: 40px;
+  overflow: hidden;
+}
+#app main .container{
+  display: flex;
+  flex-flow: column;
+  gap: 32px;
+  max-height: 100%;
+  height: 100%;
+  padding: 0 32px;
+}
+main .container .title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+main .container .title .left{}
+main .container .title .left h3{
+  font-size: 16px;
+  font-weight: 600;
+}
+main .container .title .left span{
+  font-size: 14px;
+  color: rgb(55, 65, 81);
+}
+main .container .title .right{}
+main .container .title .right button{
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+main .container .title .right .add{
+  background: rgb(1 50 98);
+}
+main .container .wrap {
+  flex: 1;
+  height: 100%;
+  overflow: auto;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
+  border-radius: 8px;
+
+}
+main .container .content{
+  max-height: 100%;
+  overflow: auto;
+}
+main .container .content table{
+  width: 100%;
+}
+
+
+main .container .content table thead{
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #e5e7eb;
+  background: rgb(241 244 245);
+  font-size: 14px;
+  font-weight: 600;
+  
+}
+main .container .content table thead th{
+  border-bottom: 1px solid #e5e7eb;
+}
+main .container .content table tr{
+  border-bottom: 1px solid #e5e7eb;
+}
+main .container .content table tr > *{
+  padding: 14px 12px;
+  text-align: start;
+  
+}
+main .container .content table{}
+main .container .content table tbody {
+  font-size: 14px;
+  color: rgb(107, 114, 128);
+}
+main .container .content table tbody tr td:nth-child(1){
+  font-weight: 500;
+  color: #111;
+}
+main .container .content table tbody tr td:last-child {
+  display: flex;
+  gap: 10px;
+}
+main .container .content table tbody tr td:last-child button{
+  padding: 5px;
+}
+
+
+/* 데스크톱 스타일 */
+@media screen and (min-width: 1024px) {
+
+}
+
+/* 태블릿 스타일 */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #app main .container{
+    padding: 0 24px;
+  }
+  #app main .container{
+    max-height: calc(100% - 64px - 40px);
+  }
+  #app main .container .wrap{
+    max-height: 100%;
+    overflow: auto;
+    border-radius: 8px;
+  }
+  .sidebar {
+    display: none;
+  }
+  header{
+    display: flex;
+  }
+  main {
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+
+  
+}
+
+/* 스마트폰 스타일 */
+@media screen and (max-width: 767px) {
+  #app main .container{
+    padding: 0 16px;
+  }
+  .sidebar {
+    display: none;
+  }
+  header{
+    display: flex;
+  }
+  main {
+    padding-bottom: 0;
+    padding-left: 0;
+    max-height: calc(100% - 64px);
+    height: 100%;
+  }
+  main .container .title{
+    flex-flow: column;
+    align-items: start;
+    gap: 10px;
+  }
+  main .container .wrap {
+    overflow: auto;
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+  main .container .wrap .content {
+    min-width: 767px;
+    border-radius: 0;
+  }
+  main .container .wrap .content table{
+
+  }
+  main .container .content table tr > *:nth-child(1){
+    padding-left: 24px;
+  }
+  main .container .content table tr > *:last-child{
+    padding-right: 24px;
+  }
+  main .container .content table thead{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  }
+}

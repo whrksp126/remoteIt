@@ -1,0 +1,86 @@
+.login_page .content{
+  display: block;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+.login_page .title_box{
+  padding-top: 80px;
+}
+.login_page .title_box img{
+  width: 180px;
+  margin: 0 auto;
+}
+.login_page .title_box h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+.login_page .login_box {
+
+}
+.login_page .login_box form {
+  display: flex;
+  flex-flow: column;
+}
+.login_page .login_box form > * {
+  margin-top: 24px;
+}
+.login_page .login_box form div {
+  display: flex;
+  flex-flow: column;
+}
+.login_page .login_box label{
+  font-size: 14px;
+  font-weight: 500;
+}
+.login_page .login_box input{
+  padding: 6px 12px;
+  margin-top: 8px;
+  border: 1px solid rgb(107, 114, 128);
+  border-radius: 6px;
+  background: var(--color-f8);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px inset, rgb(209, 213, 219) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px
+
+}
+.login_page .login_box button{
+  padding: 6px 12px;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(229, 231, 235);
+  border-radius: 6px;
+  background: rgb(1 50 98);
+}
+.login_page .login_box p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+
+/* 데스크톱 스타일 */
+@media screen and (min-width: 1024px) {
+  
+}
+
+/* 태블릿 스타일 */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/* 스마트폰 스타일 */
+@media screen and (max-width: 767px) {
+  #app .container{
+    padding: 0 20px;
+  }
+  .login_page .content{
+    max-width: initial;
+  }
+}

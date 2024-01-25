@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>remoteIt</title>
+  <!-- 전역 CSS -->
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/common.css">
+  
+  
+  <!-- 페이지 CSS -->
+  <link rel="stylesheet" href="/css/client_management.css">
+
+  <!-- 로고 -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="login_page">
+  <div id="app">
+    <div class="sidebar">
+      <div class="logo">
+        <img src="/image/remoteIt_logo_row.png" alt="">
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a class="active" href="#">
+              <i class="ph ph-storefront"></i>
+              <span>고객사 관리</span>
+            </a>
+          </li>
+        </ul>
+        <div class="profile">
+          <img src="" alt="">
+          <span>Tom Cook</span>
+        </div>
+      </nav>
+    </div>
+    <div class="sidebar_mobile">
+      <div class="background" onclick="clickHiddenMobileSidebar(event)"></div>
+      <div class="sidebar">
+        <div class="logo">
+          <img src="/image/remoteIt_logo_row.png" alt="">        </div>
+        <nav>
+          <ul>
+            <li>
+              <a class="active" href="#">
+                <i class="ph ph-storefront"></i>
+                <span>고객사 관리</span>
+              </a>
+            </li>
+          </ul>
+          <div class="profile">
+            <img src="" alt="">
+            <span>Tom Cook</span>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <header>
+      <button onclick="clickShowMobileSidebar(event)">
+        <i class="ph ph-list"></i>
+      </button>
+      <div>고객사 관리</div>
+      <a href="">
+        <img src="/image/remoteIt_circle_logo.png" alt="">
+      </a>
+    </header>
+    <main>
+      <div class="container">
+        <div class="title">
+          <div class="left">
+            <h3>고객사</h3>
+            <span>아이디, 고객사명, 이메일, 대표번호를 포함하여 관리자에게 있는 모든 고객사의 목록입니다.</span>
+          </div>
+          <div class="right">
+            <button class="add">생성</button>
+          </div>
+        </div>
+        <div class="wrap">
+          <div class="content">
+            <table>
+              <thead>
+                <tr>
+                  <th>아이디</th>
+                  <th>고객사명</th>
+                  <th>이메일</th>
+                  <th>대표번호</th>
+                  <th>기타</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>hgkim</td>
+                  <td>프라이머스</td>
+                  <td>a@b.c</td>
+                  <td>01033334444</td>
+                  <td>
+                    <button>수정</button>
+                    <button>삭제</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>hgkim</td>
+                  <td>프라이머스</td>
+                  <td>a@b.c</td>
+                  <td>01033334444</td>
+                  <td>
+                    <button>수정</button>
+                    <button>삭제</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>hgkim</td>
+                  <td>프라이머스</td>
+                  <td>a@b.c</td>
+                  <td>01033334444</td>
+                  <td>
+                    <button>수정</button>
+                    <button>삭제</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>hgkim</td>
+                  <td>프라이머스</td>
+                  <td>a@b.c</td>
+                  <td>01033334444</td>
+                  <td>
+                    <button>수정</button>
+                    <button>삭제</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>hgkim</td>
+                  <td>프라이머스</td>
+                  <td>a@b.c</td>
+                  <td>01033334444</td>
+                  <td>
+                    <button>수정</button>
+                    <button>삭제</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>hgkim</td>
+                  <td>프라이머스</td>
+                  <td>a@b.c</td>
+                  <td>01033334444</td>
+                  <td>
+                    <button>수정</button>
+                    <button>삭제</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>hgkim</td>
+                  <td>프라이머스</td>
+                  <td>a@b.c</td>
+                  <td>01033334444</td>
+                  <td>
+                    <button>수정</button>
+                    <button>삭제</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>hgkim</td>
+                  <td>프라이머스</td>
+                  <td>a@b.c</td>
+                  <td>01033334444</td>
+                  <td>
+                    <button>수정</button>
+                    <button>삭제</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>hgkim</td>
+                  <td>프라이머스</td>
+                  <td>a@b.c</td>
+                  <td>01033334444</td>
+                  <td>
+                    <button>수정</button>
+                    <button>삭제</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>hgkim</td>
+                  <td>프라이머스</td>
+                  <td>a@b.c</td>
+                  <td>01033334444</td>
+                  <td>
+                    <button>수정</button>
+                    <button>삭제</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>hgkim</td>
+                  <td>프라이머스</td>
+                  <td>a@b.c</td>
+                  <td>01033334444</td>
+                  <td>
+                    <button>수정</button>
+                    <button>삭제</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>hgkim</td>
+                  <td>프라이머스</td>
+                  <td>a@b.c</td>
+                  <td>01033334444</td>
+                  <td>
+                    <button>수정</button>
+                    <button>삭제</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>hgkim</td>
+                  <td>프라이머스</td>
+                  <td>a@b.c</td>
+                  <td>01033334444</td>
+                  <td>
+                    <button>수정</button>
+                    <button>삭제</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>hgkim</td>
+                  <td>프라이머스</td>
+                  <td>a@b.c</td>
+                  <td>01033334444</td>
+                  <td>
+                    <button>수정</button>
+                    <button>삭제</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>hgkim</td>
+                  <td>프라이머스</td>
+                  <td>a@b.c</td>
+                  <td>01033334444</td>
+                  <td>
+                    <button>수정</button>
+                    <button>삭제</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>hgkim</td>
+                  <td>프라이머스</td>
+                  <td>a@b.c</td>
+                  <td>01033334444</td>
+                  <td>
+                    <button>수정</button>
+                    <button>삭제</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>hgkim</td>
+                  <td>프라이머스</td>
+                  <td>a@b.c</td>
+                  <td>01033334444</td>
+                  <td>
+                    <button>수정</button>
+                    <button>삭제</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>hgkim</td>
+                  <td>프라이머스</td>
+                  <td>a@b.c</td>
+                  <td>01033334444</td>
+                  <td>
+                    <button>수정</button>
+                    <button>삭제</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>hgkim</td>
+                  <td>프라이머스</td>
+                  <td>a@b.c</td>
+                  <td>01033334444</td>
+                  <td>
+                    <button>수정</button>
+                    <button>삭제</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="/js/client_management.js"></script>
+</body>
+</html>
