@@ -10,7 +10,7 @@ const clickHiddenMobileSidebar = (event) => {
 // 고객사 생성 버튼 클릭 시
 const clickAddClientBtn = (event) => {
   const _tbody = document.querySelector('main .container .content table tbody');
-  _tbody.insertAdjacentHTML('afterbegin', `<tr>${clientInputTdHtml('Add', {id:'',name:'',email:'',tel:'',ip:'',port:''})}</tr>`);
+  _tbody.insertAdjacentHTML('afterbegin', `<tr>${clientInputTdHtml('Add', {id:'',name:'',cpu:'',ram:''})}</tr>`);
 }
 
 // 고객사 생성 저장 버튼 클릭 시
@@ -19,10 +19,8 @@ const clickSaveAddData = (event) => {
   const data = {
     id :_tr.querySelector('input#id').value,
     name :_tr.querySelector('input#name').value,
-    email :_tr.querySelector('input#email').value,
-    tel :_tr.querySelector('input#tel').value,
-    ip :_tr.querySelector('input#ip').value,
-    port :_tr.querySelector('input#port').value,
+    cpu :_tr.querySelector('input#cpu').value,
+    ram :_tr.querySelector('input#ram').value,
   }
   // 임시 코드 
   _tr.innerHTML = clientInputTdCancelHtml(data);
@@ -51,10 +49,8 @@ const clickEditClientBtn = (event) => {
   const data = {
     id : _tr.querySelector('[data-type="id"]').dataset.value,
     name : _tr.querySelector('[data-type="name"]').dataset.value,
-    email : _tr.querySelector('[data-type="email"]').dataset.value,
-    tel : _tr.querySelector('[data-type="tel"]').dataset.value,
-    ip : _tr.querySelector('[data-type="ip"]').dataset.value,
-    port : _tr.querySelector('[data-type="port"]').dataset.value,
+    cpu : _tr.querySelector('[data-type="cpu"]').dataset.value,
+    ram : _tr.querySelector('[data-type="ram"]').dataset.value,
   }
   _tr.innerHTML = clientInputTdHtml('Edit', data);
 }
@@ -70,10 +66,8 @@ const clickCancelEditBtn = (event) => {
   const data = {
     id: _button.dataset.id,
     name: _button.dataset.name,
-    email: _button.dataset.email,
-    tel: _button.dataset.tel,
-    ip: _button.dataset.ip,
-    port: _button.dataset.port,
+    cpu: _button.dataset.cpu,
+    ram: _button.dataset.ram,
   }
   _tr.innerHTML = clientInputTdCancelHtml(data);
 }
@@ -84,10 +78,8 @@ const clickDeleteClentBtn = async (event) => {
   const data = {
     id : _tr.querySelector('[data-type="id"]').dataset.value,
     name : _tr.querySelector('[data-type="name"]').dataset.value,
-    email : _tr.querySelector('[data-type="email"]').dataset.value,
-    tel : _tr.querySelector('[data-type="tel"]').dataset.value,
-    ip : _tr.querySelector('[data-type="ip"]').dataset.value,
-    port : _tr.querySelector('[data-type="port"]').dataset.value,
+    cpu : _tr.querySelector('[data-type="cpu"]').dataset.value,
+    ram : _tr.querySelector('[data-type="ram"]').dataset.value,
   }
   if(confirm(`${data.name} 고객사를 정말 삭제하시겠습니까??`) == true){ 
     // 임시 코드
@@ -113,10 +105,8 @@ const clientInputTdCancelHtml = (data) => {
   return `
     <td data-type="id" data-value="${data.id}">${data.id}</td>
     <td data-type="name" data-value="${data.name}">${data.name}</td>
-    <td data-type="email" data-value="${data.email}">${data.email}</td>
-    <td data-type="tel" data-value="${data.tel}">${data.tel}</td>
-    <td data-type="ip" data-value="${data.ip}">${data.ip}</td>
-    <td data-type="port" data-value="${data.port}">${data.port}</td>
+    <td data-type="cpu" data-value="${data.cpu}">${data.cpu}</td>
+    <td data-type="ram" data-value="${data.ram}">${data.ram}</td>
     <td>
       <button onclick="clickEditClientBtn(event)">수정</button>
       <button onclick="clickDeleteClentBtn(event)">삭제</button>
@@ -129,19 +119,15 @@ const clientInputTdHtml = (type, data) => {
   return `
     <td><input id="id" type="text" value="${data.id}" size="1"></td>
     <td><input id="name" type="text" value="${data.name}" size="1"></td>
-    <td><input id="email" type="email" value="${data.email}" size="1"></td>
-    <td><input id="tel" type="tel" value="${data.tel}" size="1"></td>
-    <td><input id="ip" type="text" value="${data.ip}" size="1"></td>
-    <td><input id="port" type="number" value="${data.port}" size="1"></td>
+    <td><input id="cpu" type="text" value="${data.cpu}" size="1"></td>
+    <td><input id="ram" type="text" value="${data.ram}" size="1"></td>
     <td>
       <button onclick="clickSave${type}Data(event)">저장</button>
       <button onclick="clickCancel${type}Btn(event)" 
         data-id="${data.id}"
         data-name="${data.name}"
-        data-email="${data.email}"
-        data-tel="${data.tel}"
-        data-ip="${data.ip}"
-        data-port="${data.port}"
+        data-cpu="${data.cpu}"
+        data-ram="${data.ram}"
       >취소</button>
     </td>
   `
