@@ -48,6 +48,11 @@
   font-size: 24px;
   color: #9ca3af;
 }
+.sidebar nav .profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .sidebar nav ul li a span{
   font-size: 14px;
   font-weight: 600;
@@ -87,6 +92,7 @@
   visibility: visible;
   left: 0;
 }
+
 header{
   position: sticky;
   top: 0px;
@@ -195,10 +201,15 @@ main .container .content table tbody tr td:nth-child(1){
 }
 main .container .content table tbody tr td:last-child {
   display: flex;
+  gap: 3px;
   width: 100%;
 }
 main .container .content table tbody tr td:last-child button{
   padding: 5px;
+  border-radius: 4px;
+}
+main .container .content table tbody tr td:last-child button:hover{
+  background: #efefef;
 }
 
 main .container .content table tr > *:nth-child(1){

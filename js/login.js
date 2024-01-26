@@ -5,16 +5,19 @@ const loginTypeObject = {
     type : 'MANAGER',
     fetchUrl : '',
     href : '/html/client_management.html',
+    kr_name : '관리자',
   },
   CLIENT : {
     type : 'CLIENT',
     fetchUrl : '',
-    href : '/html/client_management.html',
+    href : '/html/user_management.html',
+    kr_name : '고객사',
   },
   USER : {
     type: 'USER',
     fetchUrl : '',
-    href : '/html/client_management.html',
+    href : '',
+    kr_name : '사용자',
   },
 }
 
@@ -23,6 +26,9 @@ let loginType = 'USER';
 if(type){
   loginType = loginTypeObject[type.toUpperCase().replace(/\s+/g, '')].type ?? 'USER';
 }
+
+// 로그인 페이지 h2 변경
+document.querySelector('.title_box h2 em').innerHTML = loginTypeObject[loginType].kr_name;
 
 
 // 매니저 로그인 시
