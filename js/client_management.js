@@ -112,7 +112,9 @@ const clickDeleteClentBtn = async (event) => {
 const clientInputTdCancelHtml = (data) => {
   return `
     <td data-type="id" data-value="${data.id}">${data.id}</td>
-    <td data-type="name" data-value="${data.name}">${data.name}</td>
+    <td data-type="name" data-value="${data.name}">
+    ${data.name}
+    </td>
     <td data-type="email" data-value="${data.email}">${data.email}</td>
     <td data-type="tel" data-value="${data.tel}">${data.tel}</td>
     <td data-type="ip" data-value="${data.ip}">${data.ip}</td>

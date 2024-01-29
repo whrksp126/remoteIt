@@ -104,7 +104,11 @@ const clickDeleteClentBtn = async (event) => {
 const clientInputTdCancelHtml = (data) => {
   return `
     <td data-type="id" data-value="${data.id}">${data.id}</td>
-    <td data-type="name" data-value="${data.name}">${data.name}</td>
+    <td data-type="name" data-value="${data.name}">
+      <button class="open_set_backup" onclick="clickOpenBackUpModal(event)">
+        ${data.name}
+      </button>
+    </td>
     <td data-type="cpu" data-value="${data.cpu}">${data.cpu}</td>
     <td data-type="ram" data-value="${data.ram}">${data.ram}</td>
     <td>
@@ -130,5 +134,43 @@ const clientInputTdHtml = (type, data) => {
         data-ram="${data.ram}"
       >취소</button>
     </td>
+  `
+}
+
+// 백업 모달 열기
+const clickOpenBackUpModal = (event) => {
+  const modal = openDefaultModal();
+  modal.top.innerHTML = modalTopHtml('백업/복원 관리');
+  modal.middle.innerHTML = modalBackUpHtml();
+  const btns = [
+    {class:'action', text:'백업하기', fun:`onclick="clickBackUp(event)"`},
+    {class:'close', text:'닫기', fun:``},
+  ];
+  modal.bottom.innerHTML = modalBottomHtml(btns);
+}
+
+// 모달 백업 관리 HTML 
+const modalBackUpHtml = () => {
+  return `
+    <div class="backup_box">
+      <h2><strong>현재까지의 기록</strong>을 <strong>백업</strong>하세요.</h2>
+      
+    </div>
+    <div class="table">
+      <div class="tlabel">백업 내역 - 김호균(hgkim@p.m)</div>
+      <div class="thead">
+        <div class="th">일자</div>
+        <div class="th">기능</div>
+      </div>
+      <div class="tbody">
+        <div class="tr">
+          <div class="td">2024-01-31</div>
+          <div class="td">
+          <button>복원</button>
+          <button>삭제</button>
+          </div>
+        </div>
+      </div>
+    </div>
   `
 }

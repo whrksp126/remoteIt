@@ -101,6 +101,7 @@ header{
   gap: 24px;
   height: 64px;
   padding: 16px 24px;
+  font-weight: 700;
 }
 header > button{
   font-size: 24px;
@@ -210,7 +211,10 @@ main .container .content table tbody tr td:last-child button:hover{
   background: #efefef;
 }
 
-
+main .container .content table tbody tr td .open_set_backup {
+  text-decoration: underline;
+  color: #3F51B5;
+}
 
 main .container .content table tbody tr td input{
   width: 100%;
@@ -222,6 +226,72 @@ main .container .content table tbody tr td input{
   font-weight: 400;
   line-height: 24px;
   box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px inset, rgb(209, 213, 219) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px
+}
+
+
+.modal_middle {
+  color: rgb(55, 65, 81);
+  font-size: 14px;
+}
+.modal_middle .backup_box{
+  margin-bottom: 13px;
+}
+.modal_middle .backup_box h2 {
+  font-weight: 600;
+}
+.modal_middle .backup_box h2 strong{
+  color: #1A237E;
+}
+.modal_middle .backup_box > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal_middle .backup_box > div span{
+  
+}
+.modal_middle .backup_box button{
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: #3f51b5;
+}
+.modal_middle .table .tlabel {
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+.modal_middle .table .thead {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: rgb(226 226 226);
+  font-weight: 600;
+}
+.modal_middle .table .tbody .tr {
+  padding: 5px 10px;
+  border-bottom: 1px solid rgb(226 226 226);
+}
+.modal_middle .table .thead ,
+.modal_middle .table .tbody .tr{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal_middle .table .thead .th:nth-child(2),
+.modal_middle .table .tbody .tr .td:nth-child(2){
+  display: flex;
+  gap: 5px;
+  max-width: 100px;
+  width: 100%;
+}
+
+.modal_bottom .buttons .action {
+  background: #3F51B5;
+  color: #fff;
+}
+.modal_bottom .buttons .close{
+  background: #E0E0E0
 }
 
 
